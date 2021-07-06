@@ -199,7 +199,7 @@ compileJava {
 }
 
 curseforge {
-	apiKey = project.getProperty("token")
+	apiKey = findProperty('curseKey') ?: 0
 	
 	tasks.curseforge.dependsOn build
 	
